@@ -3,8 +3,9 @@ cd $CURRENT_PATH
 python convert_model.py \
     --model_path $MODEL_PATH \
     --pth_path $PTH_PATH \
-    --save_path $SAVE_PATH
-
+    --save_path $SAVE_PATH \
+    --rank $RANK
+    
 echo "模型加载完毕"
 
 CUDA_VISIBLE_DEVICES=5 python generate_vllm.py \
