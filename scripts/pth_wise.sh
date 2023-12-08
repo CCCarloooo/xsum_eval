@@ -1,5 +1,10 @@
 cd /home/mxd/archive/xsum_eval/scripts
 
+# 检测是否存在results文件夹，不存在则创建
+if [ ! -d "results" ]; then
+    mkdir results
+fi
+
 export CURRENT_PATH='/home/mxd/archive/xsum_eval'
 export MODEL_PATH='/home/mxd/archive/hf_mirror/gpt2-xl'
 export DATA_PATH='/home/mxd/archive/xsum_eval/data/xsum_test_suitable.json'
