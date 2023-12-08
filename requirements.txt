@@ -1,0 +1,10 @@
+accelerate==0.23.0
+evaluate==0.4.1
+torch==2.0.1
+torchaudio==2.0.2
+torchvision==0.15.2
+tqdm==4.66.1
+transformers==4.34.1
+triton==2.0.0
+vllm==0.1.4
+xformers==0.0.22
