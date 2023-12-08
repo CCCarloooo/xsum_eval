@@ -6,7 +6,8 @@ from collections import OrderedDict
 
 def main(args):
     pth_path = args.pth_path
-    base = torch.load(pth_path)
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    base = torch.load(pth_path, map_location=device)
 
     model_path = args.model_path
     model = AutoModelForCausalLM.from_pretrained(model_path)

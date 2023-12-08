@@ -1,4 +1,4 @@
-export CURRENT_PATH='/mnt/data2/mxdi/archive/xsum_eval'
+export CURRENT_PATH='/home/mxd/archive/xsum_eval'
 #当前文件夹
 cd $CURRENT_PATH
 
@@ -7,16 +7,16 @@ if [ ! -d "results" ]; then
     mkdir results
 fi
 
-export MODEL_PATH='/mnt/data2/mxdi/archive/hf-mirror/gpt2-xl'
+export MODEL_PATH='/home/mxd/archive/hf_mirror/gpt2-xl'
 export DATA_PATH='data/xsum_test_suitable.json'
 export METRIC_PATH='rouge'
-export CUDA_VISIBLE_DEVICES='5'
-export RANK='8'
-#the following three lines need to modify with model
+export RANK='1'
 
-export PTH_PATH='/mnt/data2/mxdi/archive/models/1207/1207_0149_len512_r8/whole_model/fullmodel_epoch_1.pth'
-export SAVE_PATH='converted_models/ep1_len512-r8'
-export OUT_DIR='results/ep1_len512-r8-cut-t0'
+export CUDA_DEVICES='5'
+#the following three lines need to modify with model
+export PTH_PATH='/home/mxd/archive/models/1208_130_len512_r1_epoch4_seed42_lora/whole_model/fullmodel_epoch_3_step_4.pth'
+export SAVE_PATH='converted_models/epoch_3_step_4_r1_seed42'
+export OUT_DIR='results/epoch_3_step_4_r1_seed42'
 
 
 bash $CURRENT_PATH/scripts/launch_all.sh
