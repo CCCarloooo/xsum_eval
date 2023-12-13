@@ -14,3 +14,5 @@ CUDA_VISIBLE_DEVICES=$CUDA_DEVICES python generate_vllm.py \
     --out_dir $OUT_DIR \
     --model_path $SAVE_PATH \
     --tokenizer_path $SAVE_PATH 
+
+echo "生成完毕"
